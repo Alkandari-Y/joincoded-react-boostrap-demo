@@ -6,12 +6,13 @@ import { observer } from "mobx-react"
 const MoviesList = () => {
 
     const moviesList = moviesData.movies.map((movie) => (<MovieItem movie={movie} key={movie.id}/>));
+    
 
 
     return (
-        <section className="container">
-            <div className="row d-inline-flex">
-                <div className="col-4" >
+        <section className="">
+            <div className="container">
+                <div className="row" >
                     {moviesList}
                 </div> 
             </div>

@@ -5,6 +5,7 @@ class MovieStore{
     movies = data;
     loadingStatus = true;
     bannerSelected = [];
+    
 
     constructor(){
         makeObservable(this, {
@@ -28,16 +29,23 @@ class MovieStore{
         const bannerNumber = 3;
         for (let i = 0; i < bannerNumber; i++){
             const randomIndex = Math.floor(Math.random() * this.movies.length)
-            console.log(this.bannerSelected)
             const randomMovie = this.movies[randomIndex]
             this.bannerSelected.push(randomMovie)
         }
     };
+
+    
+   
+
+    
 
 
 };
 
 
 const moviesData = new MovieStore();
-
+// moviesData.loadingStatus && setTimeout(()=>{moviesData.changeLoading()}, 1000)
+setTimeout(()=> {
+    moviesData.loadingStatus = false
+},900)
 export default moviesData;
